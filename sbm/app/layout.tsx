@@ -30,13 +30,14 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-500 ease-in-out`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange
+          disableTransitionOnChange={false}
+          // disableTransitionOnChange 속성은 테마가 바뀔 때 브라우저가 잠시 모든 CSS 트랜지션을 비활성화하도록 강제하여 false 값을 넣어서 해제한다.
         >
           <div className="">
             <header className="h-20 border-b border-b-black dark:border-b-white">

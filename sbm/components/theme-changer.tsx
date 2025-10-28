@@ -36,7 +36,9 @@ export default function ThemeChanger() {
         onClick={changeTheme}
         className="p-3 rounded-full dark:border-white border box-border border-black"
       >
-        {THEME_ICONS[theme as keyof typeof THEME_ICONS]}
+        <span>
+          <span>{THEME_ICONS[theme as keyof typeof THEME_ICONS]}</span>
+        </span>
         {/* <span>{theme}</span> */}
       </button>
     </div>
